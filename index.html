@@ -12,32 +12,31 @@
 
 <body>
 
-  <div ng-controller="AppCtrl" ng-cloak="" class="navBardemoBasicUsage" ng-app="MyApp">
-    <md-content>
-    <md-tabs md-dynamic-height="" md-border-bottom="">
-      <md-tab label="one">
-        <md-content class="md-padding">
-          <h1 class="md-display-2 ">License Request</h1>
-          <div class='ext-content'>
-          <page-one></page-one>
-          </div>
-        </md-content>
-      </md-tab>
-      <md-tab label="two">
-        <md-content class="md-padding">
-          <h1 class="md-display-2"></h1>
-          <p>test2</p>
-        </md-content>
-      </md-tab>
-      <md-tab label="three">
-        <md-content class="md-padding">
-          <h1 class="md-display-2">Tab Three</h1>
-          <p>test3</p>
-        </md-content>
-      </md-tab>
-    </md-tabs>
-  </md-content>
-</div>
+  <div ng-controller="NavController" ng-cloak="" layout="column" class="navBardemoBasicUsage md-inline-form inputdemoBasicUsage" ng-app="MyApp" >
+    <md-content >
+      <md-tabs md-dynamic-height="" md-border-bottom="">
+        <md-tab label="License Request">
+          <md-content class="md-padding">
+
+              <page-one></page-one>
+
+          </md-content>
+        </md-tab>
+        <md-tab label="License Stocks">
+          <md-content class="md-padding">
+            <div class='ext-content'>
+              <page-two></page-two>
+            </div>
+          </md-content>
+        </md-tab>
+        <md-tab label="Special License Requests">
+          <md-content class="md-padding">
+              <page-three></page-three>
+          </md-content>
+        </md-tab>
+      </md-tabs>
+    </md-content>
+  </div>
   </div>
 
   <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js'></script>

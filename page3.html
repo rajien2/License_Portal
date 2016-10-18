@@ -1,0 +1,35 @@
+    <md-content layout-padding="">
+      <div>
+        <form name="userForm">
+
+          <div layout-gt-xs="row">
+            <md-input-container>
+              <label>Enter date</label>
+               <md-datepicker ng-model="myDate" md-placeholder="Enter date"></md-datepicker>
+            </md-input-container>
+          </div>
+
+          <div layout-gt-sm="row">
+            <md-input-container class="md-block" flex-gt-sm="">
+              <label>First name</label>
+              <input ng-model="user.firstName">
+            </md-input-container>
+
+            <md-input-container class="md-block" flex-gt-sm="">
+              <label>Last Name</label>
+              <input ng-model='user.lastName'>
+            </md-input-container>
+          </div>
+
+
+          <md-input-container class="md-block">
+            <label>Needs?</label>
+            <textarea ng-model="user.needs" md-maxlength="150" rows="5" md-select-on-focus=""></textarea>
+          </md-input-container>
+
+
+        </form>
+      </div>
+    </md-content>
+
+  </div>

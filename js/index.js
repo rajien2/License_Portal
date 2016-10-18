@@ -3,19 +3,19 @@
 
 
   var MyApp = angular.module('MyApp', ['ngMaterial', 'ngMessages', 'material.svgAssetsCache', 'firebase'])
-    .controller('AppCtrl', AppCtrl)
     .component('pageOne', {
       templateUrl: 'page1.html',
-      controller: AppCtrl,
+      controller: NavController,
     })
     .component('pageTwo', {
       templateUrl: 'page2.html',
-      controller: AppCtrl,
+      controller: NavController,
     })
     .component('pageThree', {
       templateUrl: 'page3.html',
-      controller: AppCtrl,
+      controller: NavController,
     })
+    .controller('NavController', NavController)
     .controller("SampleCtrl", function ($scope, $firebaseObject) {
 
       var ref = firebase.database().ref().child("data");
@@ -28,7 +28,17 @@
       syncObject.$bindTo($scope, "data");
     })
 
-  function AppCtrl($scope) {
+    .config(function ($mdThemingProvider) {
+
+      // Configure a dark theme with primary foreground yellow
+
+      $mdThemingProvider.theme('docs-dark', 'default')
+        .primaryPalette('yellow')
+        .dark();
+
+    });
+
+  function NavController($scope) {
     $scope.currentNavItem = 'page1';
   }
 
